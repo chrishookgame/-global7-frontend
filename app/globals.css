@@ -1,0 +1,138 @@
+:root {
+  /* Paleta derivada del logo G7AE: azul marino + dorado + crema cálido */
+  --navy-900: #0e1a2e;
+  --navy-800: #16273f;
+  --navy-600: #2e5c8a;
+  --gold-600: #b8862e;
+  --gold-500: #c9962f;
+  --gold-100: #f3e3bf;
+  --cream-0: #faf6ee;
+  --cream-1: #f2ebd9;
+  --ink: #1c1a15;
+  --ink-soft: #5a5548;
+  --line: #e2d8bf;
+  --error: #a3352b;
+  --success: #2f6e4e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--cream-0);
+  color: var(--ink);
+}
+
+h1, h2, h3 {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--navy-900);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input,
+textarea,
+button {
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.btn {
+  background: var(--navy-900);
+  color: var(--cream-0);
+  border: none;
+  padding: 11px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.btn:hover {
+  background: var(--navy-800);
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn:disabled {
+  background: #b8b3a5;
+  cursor: not-allowed;
+}
+
+.btn-gold {
+  background: var(--gold-500);
+  color: var(--navy-900);
+}
+
+.btn-gold:hover {
+  background: var(--gold-600);
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 18px;
+  transition: border-color 0.15s ease, transform 0.12s ease;
+}
+
+.card:hover {
+  border-color: var(--gold-500);
+  transform: translateY(-2px);
+}
+
+.field {
+  display: block;
+  width: 100%;
+  padding: 11px 13px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  margin-bottom: 12px;
+  background: #fff;
+}
+
+.field:focus {
+  outline: none;
+  border-color: var(--navy-600);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.error {
+  color: var(--error);
+  margin-bottom: 12px;
+}
+
+/* Divisor "circuito" — eco del detalle de la G en el logo */
+.circuit-divider {
+  height: 1px;
+  background: var(--line);
+  position: relative;
+  margin: 0;
+}
+
+.circuit-divider::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: 40px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--gold-500);
+}
